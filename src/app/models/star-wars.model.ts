@@ -1,4 +1,6 @@
 export interface StarWarsModel {
-    episode_id: number
-    title: string
+    title: string,
+    director: string,
+    producer: string,
+    release_date: number
 }

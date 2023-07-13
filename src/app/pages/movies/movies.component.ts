@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsModel } from 'src/app/models/star-wars.model';
 import { DataStarWarsService } from 'src/app/services/data-star-wars.service';
-import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-movies',
@@ -12,10 +11,10 @@ import { MatSort } from '@angular/material/sort';
 export class MoviesComponent implements OnInit {
 
   films: StarWarsModel[] = [];
-  displayedColumns = ['episode', 'title'];
+  displayedColumns = ['title', 'director', 'producer', 'release_date'];
 
   constructor (
-    private starWarsService: DataStarWarsService
+      private starWarsService: DataStarWarsService
     ) { }
   
     ngOnInit(): void {
