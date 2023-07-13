@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsModel } from 'src/app/models/star-wars.model';
 import { DataStarWarsService } from 'src/app/services/data-star-wars.service';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-movies',
@@ -19,7 +20,7 @@ export class MoviesComponent implements OnInit {
   
     ngOnInit(): void {
       this.starWarsService.read().subscribe((films: any) => {
-        this.films = films;
+        this.films = films.results;
     })
   }
 }

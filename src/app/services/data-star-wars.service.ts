@@ -8,8 +8,8 @@ import { Observable } from "rxjs";
 })
 export class DataStarWarsService {
 
-  private baseUrl = 'http://localhost:3001/results';
-  // private baseUrl = 'https://swapi.dev/api'
+  // private baseUrl = 'http://localhost:3001/results';
+  private baseUrl = 'https://swapi.dev/api/films'
   
   constructor(
     private http: HttpClient
