@@ -5,6 +5,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { SpaceshipsComponent } from './pages/spaceships/spaceships.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: "home",
     component: HomeComponent
@@ -14,7 +15,7 @@ const routes: Routes = [
     component: MoviesComponent
   },
   {
-    path: "space-ships",
+    path: "spaceships",
     component: SpaceshipsComponent
   }
 ];

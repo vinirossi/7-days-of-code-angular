@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { AngularMaterialModule } from './shared/angular-material/angular-materia
 import { HeaderComponent } from './core/components/header/header.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { MainComponent } from './core/components/main/main.component';
+import { DataStarWarsService } from './services/data-star-wars.service';
+
+import { TranslateTitlePipe } from './shared/translate-title.pipe';
 
 @NgModule({
   declarations: [
@@ -22,15 +26,19 @@ import { MainComponent } from './core/components/main/main.component';
     SpaceshipsComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    TranslateTitlePipe    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DataStarWarsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
